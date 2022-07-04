@@ -90,8 +90,6 @@ class Page:
             mb.showerror('Error!', "Please Enter your password")
             return
 
-        #self.db.execute("INSERT INTO users (username, password) VALUES(?, ?)", user, generate_password_hash(password))
-
         # Query database for username
         rows = self.db.execute("SELECT * FROM users WHERE username = ?", user)
 
